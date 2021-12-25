@@ -94,7 +94,7 @@ public class EditActivity extends AppCompatActivity {
                 } else if (EtKeluhan.getText().toString().length() == 0) {
                     EtKeluhan.setError("-, jika tidak ada Keluhan lain");
                 } else {
-                    Toast.makeText(getApplicationContext(), "Pendaftaran Berhasil!",
+                    Toast.makeText(getApplicationContext(), "Edit Successfully!",
                             Toast.LENGTH_SHORT).show();
                     PeduliMental peduliMental = myDatabase.daoPeduliMental().getPeduliMentalById(selectedId);
 
