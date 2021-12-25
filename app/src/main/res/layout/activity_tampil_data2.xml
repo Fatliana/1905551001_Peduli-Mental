@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF99CCFF"
+    tools:context=".TampilDataActivity">
+
+    <LinearLayout
+        android:id="@+id/lyImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImage"
+            android:layout_width="130dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="5dp"
+            android:src="@drawable/user_placeholder"
+            android:layout_height="130dp"/>
+
+        <TextView
+            android:id="@+id/tampilJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/data_user"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints,RelativeOverlap" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lyImage"/>
+
+</RelativeLayout>

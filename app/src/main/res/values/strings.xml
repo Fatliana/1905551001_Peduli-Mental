@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Peduli Mental</string>
+    <string name="Form_Pendaftaran">Form Pendaftaran</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="Jenis_Kelamin">Jenis Kelamin</string>
+    <string name="pria">Pria</string>
+    <string name="wanita">Wanita</string>
+    <string name="usia">Usia</string>
+    <string name="Hobi">Hobi</string>
+    <string name="_15Tahun">15 Tahun</string>
+    <string name="SusahTidur">Susah Tidur</string>
+    <string name="Gelisah">Gelisah dan takut berlebih</string>
+    <string name="suasanahati">Suasana Hati</string>
+    <string name="KirimData">Kirim Data</string>
+    <string name="data_user">Data User</string>
+    <string name="keluhan">Keluhan</string>
+</resources>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:fillViewport="true"
+    android:background="#FF99CCFF"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/gambar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/gambar1" />
+
+        <TextView
+            android:id="@+id/TvJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gambar1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="18dp"
+            android:text="@string/Form_Pendaftaran"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/EtEmail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TvJudul"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="55dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minHeight="40dp"
+            android:nextFocusDown="@id/EtUsername"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/EtUsername"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EtEmail"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/username"
+            android:maxLength="10"
+            android:minHeight="40dp"
+            android:nextFocusDown="@id/Etpass"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/Etpass"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EtUsername"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="2dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLength="8"
+            android:minHeight="40dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/TvJK"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Etpass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:hint="@string/Jenis_Kelamin"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/RadioBG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TvJK"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:textColor="@color/black">
+
+            <RadioButton
+                android:id="@+id/RBpria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pria"
+                android:textColor="@color/black"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/RBwanita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/wanita"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/TvUsia"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/RadioBG"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/usia"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <SeekBar
+            android:id="@+id/idseekbar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TvUsia"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:max="50"
+            android:min="15"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:id="@+id/TvUsia1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idseekbar"
+            android:layout_centerHorizontal="true"
+            android:text="@string/_15Tahun"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/TvKeluhan"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TvUsia1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Keluhan Yang Dialami"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/cbWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvKeluhan"
+            android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/CBsusahtidur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="@string/SusahTidur"
+            android:textColor="@color/black" />
+
+        <CheckBox
+            android:id="@+id/cbgelisah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="Gelisah dan takut berlebih"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:id="@+id/cbsuasanahati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="Perubahan suasana hati"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:id="@+id/cbPerubahantidur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="perubahan tidur atau nafsu makan"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:id="@+id/cbSukamengisolasidiri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="Suka mengisolasi diri"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/EtKeluhan"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbWrapper"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:hint="Keluhan Lainnya"
+            android:maxLength="30"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnn"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EtKeluhan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/purple_200"
+            android:text="@string/KirimData"
+            android:textColor="@color/black"
+            app:cornerRadius="20dp" />
+    </RelativeLayout>
+</ScrollView>
+

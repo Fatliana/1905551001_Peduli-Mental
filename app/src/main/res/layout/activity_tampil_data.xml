@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF99CCFF"
+    android:focusable="true"
+    android:gravity="center"
+    android:fillViewport="true"
+    android:focusableInTouchMode="true"
+    tools:context=".TampilData">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tampilJudul"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImage"
+            android:layout_width="130dp"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="5dp"
+            android:src="@drawable/user_placeholder"
+            android:layout_height="130dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tampilJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="@string/data_user"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints,RelativeOverlap" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="237dp"
+        android:layout_marginBottom="-100dp"
+        android:textSize="17sp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:contentPadding="20dp">
+
+        <LinearLayout
+            android:id="@+id/tabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/idEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tampilJudul"
+                android:text="Email"
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/idusernama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idnama"
+                android:layout_marginTop="10dp"
+                android:text="Username"
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/idJK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idusernama"
+                android:layout_marginTop="10dp"
+                android:text="Gender"
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/idusia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idJK"
+                android:layout_marginTop="10dp"
+                android:text="Usia"
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/idCBHobi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idusia"
+                android:layout_marginTop="10dp"
+                android:text="Hobi"
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/idHobi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idusia"
+                android:layout_marginTop="10dp"
+                android:text="Hobi Lain"
+                android:textColor="#000000"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="199dp"
+            android:layout_marginEnd="341dp"
+            android:layout_marginBottom="204dp"
+            android:orientation="vertical"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:id="@+id/tampilEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tampilJudul"
+                android:layout_marginLeft="70dp"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="17sp"
+                tools:layout_editor_absoluteX="226dp" />
+
+            <TextView
+                android:id="@+id/tampilUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tampilEmail"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tampilJK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tampilUsername"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tampilUsia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tampilJK"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tampilCBHobi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tampilUsia"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tampilHobi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tampilCBHobi"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
